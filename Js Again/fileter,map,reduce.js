@@ -10,7 +10,7 @@ const coding = ['js','ruby','java','py','cpp'];
 
 const myNums = [1,2,3,4,5,6,7,8,9,10];
 
-// const newNums = myNums.filter((num) => num > 5) // it will return the values since we are using parenthesis
+// const newNums = myNums.filter((num) => num > 5) // it will return the values since we are using parenthesis// filter is use for taking the values by satifying the condition
 const newNums = myNums.filter((num) => { // it won't return values since we are not using parenthesis we are braces that is scope{} , so to return values we need to right explicitely return.
     // num > 5 it won't 
    return  num > 5 // it wil.
@@ -52,13 +52,13 @@ userBooks = books.filter((bk) => bk.edition === '6')
  
 
 
-// ==========================>>>>>>>>>>>>>>> map function
+// ==========================>>>>>>>>>>>>>>> map function --> map function is callback function used to return the values which satisfy the condition
 
 
 const myNumbers = [1,2,3,4,5,6,7,8,9,10]
 
 let newNumbers = myNumbers.map( (num) => num + 10)
-// console.log(newNumbers);
+console.log(newNumbers);
 
 // +++++++++++++++++++++++++ chainig method
 
@@ -102,7 +102,7 @@ const shoppingCart = [
 ]
 
 const priceTotal = shoppingCart.reduce( (acc,productPrice) => acc + productPrice.price, 0)
-console.log(priceTotal);
+// console.log(priceTotal);
 
 
 
