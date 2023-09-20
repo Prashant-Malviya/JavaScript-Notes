@@ -1,15 +1,15 @@
 const myName = 'Prashant';
 const repositories = 25;
 
-console.log(myName + repositories + "values");
+console.log(myName + repositories + "values"); // Prashant25values
 
 
 console.log(`HI I am ${myName} and my repos are ${repositories}`); // string interpolation
 
 const gameName = new String('saktiman');
 
-console.log(gameName[0]);
-console.log(gameName.__proto__)
+console.log(gameName[0]); // s
+console.log(gameName.__proto__) // {}
 
 console.log(gameName.length);
 console.log(gameName.toUpperCase());
