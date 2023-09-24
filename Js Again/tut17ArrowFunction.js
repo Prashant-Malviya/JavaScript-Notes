@@ -6,19 +6,20 @@ const user = { // this keyword refers current context
         console.log(`${this.userName}, welcome to website`);
         console.log(this);
     }
+    
 }
 
 // user.welcomeMessage()
-// user.userName = "mohan";
+user.userName = "mohan";
 // user.welcomeMessage()
 
-// console.log(this); // in node environment it is empty object
+// console.log(this); // in node environment it is empty object{}
 // while in browser it is refer to window object 
 
 function chai(){
     let userName = 'prashant'
-    // console.log(this);
-    console.log(this.userName);//it is not print this it gives undefined 
+    console.log(this.userName);
+    // console.log(this);//it is not print this it gives undefined // which means context thing is only working inside the object not inside the function
 }
 
 // chai();
@@ -31,10 +32,10 @@ function chai(){
 
 const computer = () => {
     let userName = 'krishna';
-    console.log(this);
+    console.log(this); // {}
 }
  
-// computer();
+computer();
 
 // const addTwo = (num1,num2) =>{
 //     return num1+num2;

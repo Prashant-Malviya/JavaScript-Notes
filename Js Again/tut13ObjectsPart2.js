@@ -8,7 +8,7 @@ tinderUser.id = '123abc'
 tinderUser.name = 'Sammy'
 tinderUser.isLoggedIn = false
 
-// console.log(tinderUser)
+console.log(tinderUser)
 
 const regularUser = {
     email : 'a@gmail.com',
@@ -20,7 +20,7 @@ const regularUser = {
     }
 }
 
-// console.log(regularUser.fullName.userfullName.lastName)
+console.log(regularUser.fullName.userfullName.lastName)
 // console.log(regularUser)
 
 const obj1 = {
@@ -61,7 +61,7 @@ console.log(tinderUser);
 
 console.log(Object.keys(tinderUser))
 console.log(Object.values(tinderUser))
-console.log(Object.entries(tinderUser))
+console.log(Object.entries(tinderUser)) // used for converting the key and values of object into the array
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 

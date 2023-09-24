@@ -4,10 +4,10 @@ const balance = new Number(500);
 console.log(balance)
 
 console.log(balance.toString().length)
-console.log(balance.toFixed(2))
+console.log(balance.toFixed(2)) // 500.00 it would fixed it to upto 2 decimal places
 
 const otherNumber  = 23.02;
-console.log(otherNumber.toPrecision(2))
+console.log(otherNumber.toPrecision(2))// gives us the round of valu means it would provide us precise values
 
 const hundreds = 1000000;
 console.log(hundreds.toLocaleString('en-IN'));

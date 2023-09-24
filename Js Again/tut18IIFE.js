@@ -5,7 +5,7 @@
     console.log('DB connected');
 })();
 
-// note : - >> we need to put smicolon to use another iife function 
+// note : - >> we need to put smicolon to use another IIFE function 
 
 // below is simple iife 
 // ( () => {

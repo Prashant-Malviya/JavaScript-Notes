@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom learning</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        span{
+            background-color: bisque;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-black">
+        <h1 class="heading" id="title">DOM learning <span>Learn DOM With Fun</span></h1>
+        <h2>Lorem, ipsum dolor.</h2>
+        <h3>Lorem ipsum dolor sit.</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, facere?</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="listItem">one</li>
+            <li class="listItem">two</li>
+            <li class="listItem">three</li>
+        </ul>
+    </div>
+
+<script>
+    
+// const title = document.getElementById('title')
+
+// title.style.backgroundColor = 'yellow'
+
+// title.style.color = 'black'
+
+// title.style.borderRadius = '100px'
+
+
+
+// title.textContent // NOTE:- The difference is that textContent property shows all content either it is hidden while innerText only shows that content which is visible i won't shown hidden content
+// // 'DOM learning Learn DOM With Fun'
+
+// title.innerText
+// // 'DOM learning Learn DOM With Fun'
+
+// title.innerHTML
+// // 'DOM learning <span>Learn DOM With Fun</span>'
+
+// document.querySelector('input[type = "password"]') // all the css selector which is supported by css also can be used here using querySelector
+// // <input type=​"password" name id fdprocessedid=​"dd525k">​
+
+
+
+// document.querySelector('ul"]')
+// ​
+// const myULlist = document.querySelector('ul')
+// // undefined
+// const list = myULlist.querySelector('li')
+// // undefined
+
+// // <li>​…​</li>​
+// list.style.padding = '129px'
+// // '129px'
+
+// // undefined
+// list.style.padding = '4px'
+// // '4px'
+// list.innerText =  '1'
+// // '1'
+
+
+
+// document.querySelectorAll('li')
+
+// const tempLiList = document.querySelectorAll('li')
+
+// // tempLiList.style.color = 'yellow'
+// // VM5184:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+//     // at <anonymous>:1:24
+// // (anonymous) @ VM5184:1
+
+
+// tempLiList[0].style.color = 'yellow'
+// // 'yellow'
+// const myh3 = document.querySelectorAll('h3')
+// // undefined
+
+
+// myh3[0].style.color = 'red'
+// // 'red'
+// // tempLiList
+// // NodeList(3) [li, li, li]
+// tempLiList.forEach(function (list) {
+//     list.style.color = 'cyan'
+// })
+// undefined
+
+
+const tempClassList = document.getElementsByClassName('listItem')
+
+const myConvertedArr = Array.from(tempClassList)
+
+myConvertedArr.forEach(function (list){
+
+list.style.color = 'orange'
+
+})
+</script>
+</body>
+</html>

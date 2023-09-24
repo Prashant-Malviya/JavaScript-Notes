@@ -29,7 +29,7 @@ function loginUserMessage(userName){
 // console.log(loginUserMessage("prashant"));
 // console.log(loginUserMessage());//undefined
 
-function calculateCartPrice(val1,val2,...num1){ // known as rest operators
+function calculateCartPrice(val1,val2,...num1){ // known as rest operators // it is also known as spread operator but depends upon usecase what we call
     return num1;
 }
 // console.log(calculateCartPrice(2,3,2,1,3,));
@@ -43,7 +43,7 @@ function handelObject(anyObj){
     console.log(`username is ${anyObj.userName} and the price added in cart is ${anyObj.price}`);
 }
 
-// handelObject(user)
+handelObject(user)
 
 // handelObject({
 //     userName: "krishna",

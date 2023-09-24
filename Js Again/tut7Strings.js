@@ -16,11 +16,11 @@ console.log(gameName.toUpperCase());
 console.log(gameName.charAt(4));
 console.log(gameName.indexOf('t'));
 
-const newString = gameName.substring(0,4);
+const newString = gameName.substring(0,4);// it won't include last index value that is 4 // sakt
 console.log((newString));
 
 
-const anotherString = gameName.slice(-8,5);
+const anotherString = gameName.slice(-8,5);// it also work as substring but it can take negative parameter as well
 console.log(anotherString);
 
 const newStringOne = "           prashant           ";
