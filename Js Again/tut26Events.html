@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in js</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h1>Images</h1>
+    <ul id="images">
+        <li><img width="200px" src="img/Adani-Company-Logo.jpg" id="1"></li>
+        <li><img width="200px" src="img/Airtel-Company-Logo.jpg" id="2"></li>
+        <li><img width="200px" src="img/Amul-Company-Logo.jpg" id="3"></li>
+        <li><img width="200px" src="img/Dabur-Company-Logo.jpg" id="4"></li>
+        <a href="https://www.google.com/"><li><img width="200px" src="img/Patanjali-Company-Logo.jpg" id="5"></a></li>
+    </ul>
+
+
+</body>
+
+<script>
+    // document.getElementById('4').onclick = function(){
+    //     // alert('dabur clicked')
+    // }
+
+    // document.getElementById('3').addEventListener('click',function(){
+    //     alert('amul clicked')
+    // },false)// the third parameter is by default false, if we do not speciy that then also no issue will be there
+
+    // attachEvent() // it is old method used in internet explorer time
+    // jQuery - on // it is also old method
+
+    // document.getElementById('2').addEventListener('click',function(e){
+    //     console.log(e);
+    //     // alert('adani clicked')
+    // })
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenY, screenX
+    // altkey, ctrlkey, shiftkey,keyCode
+
+    // // event propagation (bubbling) example explained // in this firstly small list tag clicked then ul tag clicked
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside the ul");
+    //     // alert('amul clicked')
+    // },false)
+    // document.getElementById('1').addEventListener('click',function(e){
+    //     console.log('adani clicked');
+    //     // e.stopPropagation() // it will stop propagation which means it won't go to upper element after this function invoked
+    // },false)
+    // event propagation (capturing mode) example explained // in this first ul tag clicked then list tag clicked
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside the ul");
+    //     // alert('amul clicked')
+    // },true)
+    // document.getElementById('1').addEventListener('click',function(e){
+    //     console.log('adani clicked');
+    // },true)
+
+
+    // to prevent going on other tab through a tag 
+    // document.getElementById('5').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log('google clicked');
+    // },true)
+
+        document.querySelector('#images').addEventListener('click',function(e) {
+            console.log(e.target);// target element gives us the source like the image is coming in this scenario
+            console.log(e.target.parentNode)
+            // console.log(e.target.tagName)
+
+            if(e.target.tagName === 'IMG'){
+                console.log(e.target.id);
+                let removeIt = e.target.parentNode
+                removeIt.remove()
+            }
+
+            // let removeIt = e.target.parentNode
+            // removeIt.remove()
+
+            // removeIt.parentNode.removeChild(removeIt)
+        })
+</script>
+</html>

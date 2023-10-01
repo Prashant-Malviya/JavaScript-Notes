@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async js</title>
+</head>
+<body style="background-color: #414141; color: white;">
+    <h1>Async Js Concepts With Project 1</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    // setTimeout(function(){
+    //     console.log('Namaste');
+    // },2000)
+
+    // const sayNamaste = function(){
+    //     console.log("Namaste Bharat");
+    // }
+
+    // setTimeout(sayNamaste,6000);
+
+    // const changeText = function(){
+    //     document.querySelector('h1').innerHTML = 'best js'
+    // }
+
+    // setTimeout(changeText,5000)
+
+    // const changMe = setTimeout(changeText,5000)
+
+    // document.querySelector('#stop').addEventListener('click',function(){
+    //     clearTimeout(changMe)
+    //     console.log('stopped');
+    // })
+
+
+    /////////////////////////setInterval() function
+
+    // const sayDate = function(str){
+    //     console.log(str,Date.now());
+    // }
+    // setInterval(sayDate,1000,'Hare Krishna')
+    // const  intervalId = setInterval(sayDate,2000,'Hare Krishn+a');
+
+    // clearInterval(intervalId)
+ 
+    //////////////assignment : when click on starrt it should start printing on console and when click stop it should stop printing
+
+    const print = function(){
+        console.log('Krishna',Date.now())
+    } 
+
+    // const showInterval = setInterval(print,2000)
+    let intervalId;
+    const startInterval = document.querySelector('#start').addEventListener('click',function(){
+        intervalId = setInterval(print,1000)
+    })
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(intervalId);
+        console.log('stopped');
+    })
+    
+    
+
+
+
+
+
+
+    
+
+</script>
+</html>

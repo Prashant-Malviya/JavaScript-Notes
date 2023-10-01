@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async js</title>
+</head>
+<body style="background-color: #414141; color: white;">
+    <h1>Async Js Project 2</h1>
+    <h2>When click on start random color start changing and when click on stop it should stop where the random color was...</h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+const randomColor = function(){
+    const hex = '0123456789ABCEDF';
+    let color = '#';
+    for(let i=0;i<6;i++){
+        color += hex[Math.floor(Math.random()*16)]
+    }
+    return color;
+}
+
+// console.log(Math.floor(Math.random()*16));
+console.log(randomColor());
+
+let intervalId;
+const startChangingColor = function(){
+    if(!intervalId){
+        intervalId =  setInterval(changeBgColor,1000);
+    }
+    
+   function changeBgColor(){
+    document.body.style.backgroundColor = randomColor();
+   }
+}
+
+document.querySelector('#start').addEventListener('click', startChangingColor)
+
+
+const stopChangingColor = function(){
+    clearInterval(intervalId)
+    intervalId = null;
+}
+
+document.querySelector('#stop').addEventListener('click', stopChangingColor)
+</script>
+</html>
